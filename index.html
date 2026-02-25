@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMPERIA | Transformismo Escénico Profesional</title>
+  <meta name="description"
+    content="Plataforma, Agencia y Academia de transformismo escénico en Antofagasta. Donde el talento domina el escenario.">
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/sections/hero.css">
+  <link rel="stylesheet" href="./src/styles/sections/nav.css">
+  <link rel="stylesheet" href="./src/styles/sections/talents.css">
+  <link rel="stylesheet" href="./src/styles/sections/academy-agency.css">
+  <link rel="stylesheet" href="./src/styles/sections/forms.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">IMPERIA</a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#talentos">Talentos</a></li>
+        <li><a href="#academy">Academy</a></li>
+        <li><a href="#agency">Agency</a></li>
+        <li><a href="#postulacion">Postulación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-content fade-in">
+      <img id="main-logo" src="" alt="IMPERIA Logo" class="hero-logo">
+      <h1 class="hero-title">“Donde el talento domina el escenario.”</h1>
+      <p class="hero-subtitle">La plataforma líder de transformismo escénico en Antofagasta. Talento, arte y
+        profesionalismo en un solo lugar.</p>
+      <div class="hero-cta">
+        <a href="#talentos" class="btn btn-primary">Explorar Talentos</a>
+        <a href="#postulacion" class="btn btn-outline">Postula a IMPERIA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Talents Section -->
+  <section id="talentos" class="talents-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Talentos Destacados</h2>
+        <p class="section-subtitle">Nuestra selección de artistas que están redefiniendo el escenario en Antofagasta.
+        </p>
+      </div>
+      <div class="talents-grid" id="talents-container">
+        <!-- Data injected via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Academy Section -->
+  <section id="academy" class="academy-agency-section">
+    <div class="container split-container">
+      <div class="split-image fade-in">
+        <img id="academy-img" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1000"
+          alt="IMPERIA Academy">
+      </div>
+      <div class="split-content fade-in">
+        <h2 class="section-title">IMPERIA Academy</h2>
+        <p>Formación integral para el artista del futuro. Nuestro programa combina técnica, arte y gestión escénica.</p>
+        <ul class="module-list">
+          <li class="module-item"><span class="module-icon">✦</span> Maquillaje y Caracterización Profesional</li>
+          <li class="module-item"><span class="module-icon">✦</span> Expresión Corporal y Pasarela</li>
+          <li class="module-item"><span class="module-icon">✦</span> Creación de Personaje y Branding</li>
+          <li class="module-item"><span class="module-icon">✦</span> Show Final de Graduación</li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary">Inscribirme</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agency Section -->
+  <section id="agency" class="academy-agency-section" style="background: #000;">
+    <div class="container split-container" style="flex-direction: row-reverse;">
+      <div class="split-image fade-in">
+        <img id="agency-img" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000"
+          alt="IMPERIA Agency">
+      </div>
+      <div class="split-content fade-in">
+        <div class="agency-badge">Representación Exclusiva</div>
+        <h2 class="section-title">IMPERIA Agency</h2>
+        <p>Gestionamos el talento más exclusivo de la región. El Team IMPERIA representa la excelencia en cada
+          performance.</p>
+        <p style="margin-top: 1rem; color: #888;">Nuestra agencia selecciona artistas bajo criterios de alto rendimiento
+          para producciones de primer nivel.</p>
+        <a href="#contacto" class="btn btn-outline" style="margin-top: 2rem;">Solicitar Producción</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sections will be added here -->
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

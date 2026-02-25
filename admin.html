@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo | IMPERIA</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <style>
+        .admin-header {
+            padding: 2rem 0;
+            background: var(--color-black);
+            border-bottom: 1px solid var(--color-gold-glow);
+            margin-bottom: 3rem;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--color-gray-dark);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        .admin-table th,
+        .admin-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #222;
+        }
+
+        .admin-table th {
+            background: #111;
+            color: var(--color-gold);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .status-badge {
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .status-pendiente {
+            background: #554400;
+            color: #ffcc00;
+        }
+
+        .status-aprobado {
+            background: #004411;
+            color: #00ff66;
+        }
+
+        .status-rechazado {
+            background: #440000;
+            color: #ff4444;
+        }
+
+        .admin-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-sm {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            font-weight: 600;
+        }
+
+        .btn-approve {
+            background: #00ff66;
+            color: #000;
+        }
+
+        .btn-reject {
+            background: #ff4444;
+            color: #fff;
+        }
+
+        .btn-delete {
+            background: #333;
+            color: #fff;
+        }
+
+        .login-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .login-box {
+            background: var(--color-gray-dark);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid var(--color-gold-muted);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login-screen" class="login-overlay">
+        <div class="login-box">
+            <h2 class="nav-logo" style="margin-bottom: 2rem;">IMPERIA ADMIN</h2>
+            <div class="form-group">
+                <input type="password" id="admin-pass" placeholder="Contraseña de Acceso">
+            </div>
+            <button id="login-btn" class="btn btn-primary" style="width: 100%;">Ingresar</button>
+            <p id="login-error" style="color: #ff4444; margin-top: 1rem; display: none;">Contraseña incorrecta</p>
+        </div>
+    </div>
+
+    <header class="admin-header">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1 class="nav-logo">IMPERIA PANEL</h1>
+            <a href="index.html" class="btn btn-outline btn-sm">Volver al Sitio</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Gestión de Postulaciones</h2>
+
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Artista</th>
+                    <th>Nombre Real</th>
+                    <th>Especialidad</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="admin-tbody">
+                <!-- Data injected via JS -->
+            </tbody>
+        </table>
+    </main>
+
+    <script type="module" src="./src/admin.js"></script>
+</body>
+
+</html>
