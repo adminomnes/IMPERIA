@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reactive Glow Interactions
     const updateInteractives = () => {
-      const interactives = document.querySelectorAll('a, button, .talent-card, h1, h2, .split-image');
+      const interactives = document.querySelectorAll('a, button, .talent-card, h1, h2, .split-image, .syllabus-card');
       interactives.forEach(el => {
         el.addEventListener('mouseenter', () => {
           cursorHalo.style.width = '220px';
@@ -37,6 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     updateInteractives();
   }
+
+  // Academy Syllabus Card Expansion
+  const syllabusCards = document.querySelectorAll('.syllabus-card');
+  syllabusCards.forEach(card => {
+    const header = card.querySelector('.card-header');
+    header.addEventListener('click', () => {
+      // Close other cards
+      syllabusCards.forEach(otherCard => {
+        if (otherCard !== card) otherCard.classList.remove('active');
+      });
+      // Toggle current card
+      card.classList.toggle('active');
+    });
+  });
 
   // Ash Particles Effect (Hero)
   const ashContainer = document.getElementById('ash-container');
