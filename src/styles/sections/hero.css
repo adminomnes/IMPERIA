@@ -9,6 +9,8 @@
     position: relative;
     background-color: #000000;
     overflow: hidden;
+    cursor: none;
+    /* Force no cursor here */
 }
 
 .ash-container {
@@ -49,7 +51,12 @@
     font-family: var(--font-accent);
     font-size: 1.8rem;
     font-weight: 300;
+    background: none;
+    /* No color gradient in hero as per instructions */
+    -webkit-background-clip: unset;
+    background-clip: unset;
     color: var(--color-gold);
+    /* Keep original gold in hero */
     text-transform: uppercase;
     letter-spacing: 8px;
     margin-top: 2rem;

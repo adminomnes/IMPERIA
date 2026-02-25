@@ -1,50 +1,35 @@
 .talents-section {
     padding: 8rem 0;
     background-color: var(--color-black);
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.section-title {
-    font-size: 3rem;
-    color: var(--color-gold);
-    margin-bottom: 1rem;
-}
-
-.section-subtitle {
-    color: #888;
-    max-width: 600px;
-    margin: 0 auto;
+    position: relative;
 }
 
 .talents-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fill, min-max(280px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
 }
 
 .talent-card {
-    background: var(--color-gray-dark);
+    background: #0a0a0a;
     border-radius: 15px;
     overflow: hidden;
     transition: var(--transition-smooth);
-    border: 1px solid rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(255, 45, 141, 0.1);
     position: relative;
 }
 
 .talent-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
-    border-color: var(--color-gold-muted);
+    border-color: var(--color-pink-vibrant);
+    box-shadow: 0 0 30px rgba(255, 45, 141, 0.2);
 }
 
 .talent-image-wrapper {
-    height: 350px;
-    overflow: hidden;
     position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
 }
 
 .talent-image {
@@ -55,47 +40,60 @@
 }
 
 .talent-card:hover .talent-image {
-    transform: scale(1.05);
+    transform: scale(1.1);
+}
+
+.card-glow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(255, 45, 141, 0.4) 0%, transparent 40%);
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.talent-card:hover .card-glow-overlay {
+    opacity: 1;
 }
 
 .talent-info {
     padding: 1.5rem;
+    text-align: center;
 }
 
 .talent-name {
     font-size: 1.5rem;
-    color: var(--color-gold);
     margin-bottom: 0.5rem;
+    background: var(--grad-pink);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .talent-city {
+    color: var(--color-gray-soft);
     font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .talent-specialty {
-    font-size: 0.85rem;
-    background: var(--color-gold-glow);
-    color: var(--color-gold);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
     display: inline-block;
-}
-
-.btn-card {
-    width: 100%;
-    margin-top: 1.5rem;
-    text-align: center;
-    padding: 0.8rem;
-    border: 1px solid var(--color-gold-muted);
-    color: var(--color-gold);
-    border-radius: 8px;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    background: rgba(255, 45, 141, 0.2);
+    color: var(--color-pink-light);
+    font-size: 0.75rem;
     font-weight: 600;
-    transition: var(--transition-smooth);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.talent-card:hover .btn-card {
-    background: var(--color-gold);
-    color: var(--color-black);
+@media (max-width: 768px) {
+    .talents-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }

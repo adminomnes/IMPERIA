@@ -1,6 +1,8 @@
 .registration-section {
     padding: 8rem 0;
     background-color: var(--color-gray-dark);
+    position: relative;
+    border-top: 1px solid var(--color-pink-glow);
 }
 
 .registration-form {
@@ -9,8 +11,14 @@
     background: var(--color-black);
     padding: 3rem;
     border-radius: 20px;
-    border: 1px solid var(--color-gold-muted);
-    box-shadow: var(--shadow-gold);
+    border: 1px solid rgba(255, 45, 141, 0.2);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-smooth);
+}
+
+.registration-form:hover {
+    border-color: var(--color-pink-vibrant);
+    box-shadow: var(--shadow-pink);
 }
 
 .form-grid {
@@ -30,9 +38,10 @@
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--color-gold);
+    color: var(--color-gray-light);
     font-weight: 600;
     font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
 .form-group input,
@@ -40,9 +49,9 @@
 .form-group textarea {
     width: 100%;
     padding: 0.8rem 1rem;
-    background: #111;
-    border: 1px solid #333;
-    color: white;
+    background: #0d0d0d;
+    border: 1px solid #222;
+    color: var(--color-white);
     border-radius: 8px;
     font-family: var(--font-primary);
     transition: var(--transition-smooth);
@@ -52,8 +61,9 @@
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--color-gold);
-    background: #1a1a1a;
+    border-color: var(--color-pink-vibrant);
+    background: #111;
+    box-shadow: 0 0 10px rgba(255, 45, 141, 0.2);
 }
 
 .file-input-container {
@@ -61,13 +71,14 @@
     padding: 2rem;
     text-align: center;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: none;
+    /* Inherit global none */
     transition: var(--transition-smooth);
 }
 
 .file-input-container:hover {
-    border-color: var(--color-gold-muted);
-    background: rgba(212, 175, 55, 0.05);
+    border-color: var(--color-pink-vibrant);
+    background: rgba(255, 45, 141, 0.05);
 }
 
 .form-footer {
@@ -79,10 +90,11 @@
     display: none;
     text-align: center;
     padding: 2rem;
-    background: var(--color-gold-glow);
-    border: 1px solid var(--color-gold);
+    background: rgba(255, 45, 141, 0.1);
+    border: 1px solid var(--color-pink-vibrant);
     border-radius: 10px;
-    color: var(--color-gold);
+    color: var(--color-pink-light);
+    box-shadow: var(--shadow-pink);
 }
 
 @media (max-width: 768px) {

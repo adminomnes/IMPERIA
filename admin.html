@@ -10,7 +10,7 @@
         .admin-header {
             padding: 2rem 0;
             background: var(--color-black);
-            border-bottom: 1px solid var(--color-gold-glow);
+            border-bottom: 1px solid var(--color-pink-glow);
             margin-bottom: 3rem;
         }
 
@@ -27,12 +27,18 @@
         .admin-table td {
             padding: 1rem;
             text-align: left;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid #1a1a1a;
+            color: var(--color-gray-soft);
+        }
+
+        .admin-table tr:hover td {
+            color: var(--color-white);
+            background: rgba(255, 45, 141, 0.05);
         }
 
         .admin-table th {
             background: #111;
-            color: var(--color-gold);
+            color: var(--color-pink-light);
             text-transform: uppercase;
             font-size: 0.8rem;
             letter-spacing: 1px;
@@ -46,17 +52,17 @@
         }
 
         .status-pendiente {
-            background: #554400;
+            background: #332200;
             color: #ffcc00;
         }
 
         .status-aprobado {
-            background: #004411;
+            background: #002208;
             color: #00ff66;
         }
 
         .status-rechazado {
-            background: #440000;
+            background: #220000;
             color: #ff4444;
         }
 
@@ -72,11 +78,17 @@
             cursor: pointer;
             border: none;
             font-weight: 600;
+            transition: var(--transition-smooth);
         }
 
         .btn-approve {
             background: #00ff66;
             color: #000;
+        }
+
+        .btn-approve:hover {
+            filter: brightness(1.2);
+            transform: translateY(-2px);
         }
 
         .btn-reject {
@@ -106,10 +118,11 @@
             background: var(--color-gray-dark);
             padding: 3rem;
             border-radius: 20px;
-            border: 1px solid var(--color-gold-muted);
+            border: 1px solid var(--color-pink-glow);
             text-align: center;
             max-width: 400px;
             width: 100%;
+            box-shadow: var(--shadow-pink);
         }
     </style>
 </head>

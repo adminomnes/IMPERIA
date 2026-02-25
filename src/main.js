@@ -2,14 +2,49 @@
 import { db } from './modules/db.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Ash Particles Effect
+  // Halo Cursor Logic
+  const cursorHalo = document.getElementById('cursor-halo');
+
+  if (window.innerWidth > 1024 && cursorHalo) {
+    document.addEventListener('mousemove', (e) => {
+      cursorHalo.style.left = `${e.clientX}px`;
+      cursorHalo.style.top = `${e.clientY}px`;
+    });
+
+    // Reactive Glow Interactions
+    const updateInteractives = () => {
+      const interactives = document.querySelectorAll('a, button, .talent-card, h1, h2, .split-image');
+      interactives.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursorHalo.style.width = '220px';
+          cursorHalo.style.height = '220px';
+          cursorHalo.style.opacity = '0.6';
+          cursorHalo.style.filter = 'blur(35px)';
+
+          if (el.classList.contains('btn') || el.tagName === 'BUTTON') {
+            cursorHalo.style.background = 'radial-gradient(circle, #FF4FA3 0%, transparent 70%)';
+          }
+        });
+
+        el.addEventListener('mouseleave', () => {
+          cursorHalo.style.width = '150px';
+          cursorHalo.style.height = '150px';
+          cursorHalo.style.opacity = '0.35';
+          cursorHalo.style.filter = 'blur(25px)';
+          cursorHalo.style.background = 'radial-gradient(circle, var(--color-pink-vibrant) 0%, transparent 70%)';
+        });
+      });
+    };
+    updateInteractives();
+  }
+
+  // Ash Particles Effect (Hero)
   const ashContainer = document.getElementById('ash-container');
   if (ashContainer) {
     for (let i = 0; i < 40; i++) {
       const ash = document.createElement('div');
       ash.className = 'ash';
 
-      // Random properties
       const size = Math.random() * 3 + 1;
       const left = Math.random() * 100;
       const duration = Math.random() * 15 + 10;
@@ -51,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close mobile menu when a link is clicked
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-      navLinks.classList.remove('active');
+      if (mobileMenu) mobileMenu.classList.remove('active');
+      if (navLinks) navLinks.classList.remove('active');
     });
   });
 
@@ -75,8 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
         social: document.getElementById('social').value,
         phone: document.getElementById('phone').value,
         email: document.getElementById('email').value,
-        // Files would normally be uploaded to a server
-        // Here we'll just store names as placeholder
         photos: Array.from(document.getElementById('photos').files).map(f => f.name)
       };
 
@@ -85,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
       talentForm.style.display = 'none';
       formSuccess.style.display = 'block';
 
-      // Reset catalog to show changes (though new ones are pending)
       renderTalents();
     });
   }
@@ -107,12 +139,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="talent-card fade-in">
                 <div class="talent-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=400" alt="${artist.artistName}" class="talent-image">
+                    <div class="card-glow-overlay"></div>
                 </div>
                 <div class="talent-info">
                     <h3 class="talent-name">${artist.artistName}</h3>
                     <p class="talent-city">${artist.city}</p>
                     <span class="talent-specialty">${artist.specialty}</span>
-                    <a href="#" class="btn-card">Ver Perfil</a>
+                    <a href="#" class="btn btn-card" style="margin-top: 1rem; padding: 0.5rem 1.5rem; font-size: 0.8rem; border-radius: 4px; background: var(--grad-pink); color: white;">Ver Perfil</a>
                 </div>
             </div>
         `).join('');

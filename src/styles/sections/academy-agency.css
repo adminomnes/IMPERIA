@@ -1,7 +1,8 @@
 .academy-agency-section {
     padding: 8rem 0;
     background: linear-gradient(135deg, #000 0%, #0a0a0a 100%);
-    border-top: 1px solid var(--color-gold-glow);
+    border-top: 1px solid var(--color-pink-glow);
+    position: relative;
 }
 
 .split-container {
@@ -18,13 +19,39 @@
     flex: 1;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: var(--shadow-gold);
-    border: 1px solid var(--color-gold-muted);
+    box-shadow: var(--shadow-pink);
+    border: 1px solid rgba(255, 45, 141, 0.2);
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+/* Image Overlay with Dark Gradient Pink */
+.split-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(255, 45, 141, 0.2));
+    opacity: 0.8;
+    transition: var(--transition-smooth);
+}
+
+.split-image:hover::after {
+    opacity: 0.4;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(255, 45, 141, 0.4));
+}
+
+.split-image:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-pink-strong);
 }
 
 .split-image img {
     width: 100%;
     display: block;
+    transition: var(--transition-smooth);
 }
 
 .module-list {
@@ -36,23 +63,26 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
-    color: #ccc;
+    color: var(--color-gray-light);
 }
 
 .module-icon {
-    color: var(--color-gold);
+    color: var(--color-pink-vibrant);
     font-size: 1.2rem;
+    text-shadow: 0 0 10px var(--color-pink-glow);
 }
 
 .agency-badge {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1px solid var(--color-gold);
-    color: var(--color-gold);
+    border: 1px solid var(--color-pink-vibrant);
+    color: var(--color-pink-vibrant);
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 1.5rem;
+    background: rgba(255, 45, 141, 0.1);
+    box-shadow: 0 0 10px rgba(255, 45, 141, 0.2);
 }
 
 @media (max-width: 992px) {
