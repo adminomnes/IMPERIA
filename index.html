@@ -17,23 +17,43 @@
 
 <body>
   <div id="cursor-halo"></div>
+
+  <!-- Overlay for Mobile Menu -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+      <a href="/" class="nav-logo">IMPERIA</a>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/talentos.html">Talentos</a></li>
+      <li><a href="/academy.html">Academy</a></li>
+      <li><a href="/agency.html">Agency</a></li>
+      <li><a href="/contacto.html">Contacto</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <p class="sidebar-claim">Donde comienza tu reinado</p>
+    </div>
+  </div>
+
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container nav-container">
-      <a href="#" class="nav-logo">IMPERIA</a>
+      <a href="/" class="nav-logo">IMPERIA</a>
       <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#talentos">Talentos</a></li>
-        <li><a href="#academy">Academy</a></li>
-        <li><a href="#agency">Agency</a></li>
-        <li><a href="#postulacion">Postulación</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/talentos.html">Talentos</a></li>
+        <li><a href="/academy.html">Academy</a></li>
+        <li><a href="/agency.html">Agency</a></li>
+        <li><a href="/contacto.html">Contacto</a></li>
       </ul>
-      <div class="nav-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+      <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
     </div>
   </nav>
 
@@ -48,181 +68,70 @@
       </div>
       <h1 class="hero-title-cinematic">Donde el talento domina el escenario</h1>
       <div class="hero-cta" style="margin-top: 2rem;">
-        <a href="#talentos" class="btn btn-primary">Explorar Talentos</a>
-        <a href="#postulacion" class="btn btn-outline">Postula a IMPERIA</a>
+        <a href="/talentos.html" class="btn btn-primary">Explorar Talentos</a>
+        <a href="/contacto.html" class="btn btn-outline">Postula a IMPERIA</a>
       </div>
     </div>
   </section>
 
-  <!-- Talents Section -->
-  <section id="talentos" class="talents-section">
+  <!-- Vitrina: Resumen Secciones -->
+  <section class="vitrina-section">
     <div class="container">
-      <div class="section-header fade-in">
-        <h2 class="section-title">Talentos Destacados</h2>
-        <p class="section-subtitle">Nuestra selección de artistas que están redefiniendo el escenario en Antofagasta.
-        </p>
+
+      <!-- 1. Bloque Talentos -->
+      <div class="vitrina-block fade-in">
+        <div class="vitrina-image">
+          <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=800" alt="Talentos IMPERIA">
+          <div class="card-glow-overlay"></div>
+        </div>
+        <div class="vitrina-content">
+          <h2 class="section-title">El Elenco</h2>
+          <p class="section-subtitle" style="margin-left: 0;">Descubre a los artistas que están redefiniendo el
+            transformismo escénico en la región.</p>
+          <a href="/talentos.html" class="btn btn-outline">Ver Catálogo Completo</a>
+        </div>
       </div>
-      <div class="talents-grid" id="talents-container">
-        <!-- Data injected via JS -->
+
+      <hr style="border: none; border-top: 1px solid rgba(255, 45, 141, 0.1); margin: 8rem 0;">
+
+      <!-- 2. Bloque Academy -->
+      <div class="vitrina-block fade-in" style="flex-direction: row-reverse;">
+        <div class="vitrina-image">
+          <img src="/drag.png" alt="IMPERIA Academy">
+          <div class="card-glow-overlay"></div>
+        </div>
+        <div class="vitrina-content">
+          <h2 class="section-title">IMPERIA Academy</h2>
+          <p class="section-subtitle" style="margin-left: 0;">Formación profesional para quienes desean pasar del hobby
+            a la maestría escénica.</p>
+          <a href="/academy.html" class="btn btn-primary">Descubrir la Academia</a>
+        </div>
       </div>
+
+      <hr style="border: none; border-top: 1px solid rgba(255, 45, 141, 0.1); margin: 8rem 0;">
+
+      <!-- 3. Bloque Agency -->
+      <div class="vitrina-block fade-in">
+        <div class="vitrina-image">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800" alt="IMPERIA Agency">
+          <div class="card-glow-overlay"></div>
+        </div>
+        <div class="vitrina-content">
+          <h2 class="section-title">IMPERIA Agency</h2>
+          <p class="section-subtitle" style="margin-left: 0;">Representación exclusiva y gestión de talento para
+            producciones de alto impacto.</p>
+          <a href="/agency.html" class="btn btn-outline">Servicios de Agencia</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- IMPERIA Academy Section -->
-  <section id="academy" class="academy-section">
-    <!-- 1. Academy Hero -->
-    <div class="academy-hero fade-in">
-      <div class="container text-center">
-        <h2 class="academy-hero-title">IMPERIA Academy</h2>
-        <h3 class="academy-hero-subtitle">Donde comienza tu reinado</h3>
-        <p class="academy-hero-text">Formación profesional en transformismo escénico para quienes desean pasar del hobby
-          a la maestría.</p>
-        <a href="#registro" class="btn btn-primary">💖 Postular a la Academia</a>
-      </div>
-    </div>
-
-    <!-- 2. Bloque Manifiesto -->
-    <div class="academy-manifesto">
-      <div class="container">
-        <div class="manifesto-content fade-in">
-          <h2 class="manifesto-title">Una institución, no solo una escuela</h2>
-          <div class="manifesto-text">
-            <p>Imperia no es solo una escuela de arte; es una institución dedicada a la formación de figuras icónicas en
-              el mundo del transformismo contemporáneo.</p>
-            <p>Fundada bajo la premisa de que el género es un lienzo y la identidad una obra maestra, Imperia nace para
-              llenar el vacío entre el hobby y la maestría escénica.</p>
-            <p>En nuestra academia entendemos que ser una estrella del transformismo exige una amalgama de habilidades
-              que trascienden el maquillaje. Requiere la precisión de un pintor, la gracia de un bailarín, la presencia
-              de un actor y la visión de un diseñador.</p>
-            <p>Nuestra misión es empoderar a cada estudiante, entregándole herramientas técnicas y psicológicas para
-              habitar su personaje con confianza inquebrantable.</p>
-            <p>En Imperia respetamos la herstory de quienes pavimentaron el camino, mientras impulsamos la innovación y
-              la ruptura de moldes.</p>
-            <p class="manifesto-highlight">Aquí no solo aprendes a transformarte. <br>Aquí aprendes a reinar.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3. Temario Académico -->
-    <div class="academy-syllabus">
-      <div class="container">
-        <h2 class="section-title text-center">El camino hacia el trono</h2>
-        <p class="section-subtitle text-center">Nuestro temario está diseñado para forjar la presencia y el carácter de
-          las próximas soberanas del escenario.</p>
-
-        <div class="syllabus-grid">
-          <!-- Modulo I -->
-          <div class="syllabus-card" data-module="1">
-            <div class="card-header">
-              <span class="module-icon">💄</span>
-              <h3 class="module-title">Módulo I: La Arquitectura del Rostro</h3>
-              <span class="expand-icon">+</span>
-            </div>
-            <div class="card-body">
-              <div class="card-content">
-                <ul>
-                  <li>Fundamentos de la Canvas: preparación, cuidado dermatológico y técnicas de cobertura de alta
-                    duración.</li>
-                  <li>Teoría del color aplicada al transformismo.</li>
-                  <li>Contorno y luces extremas: esculpido óseo y alteración de facciones.</li>
-                  <li>Diseño de cejas y arte de la mirada.</li>
-                  <li>Caracterización y estilos: Fishy, Club Kid y Avant-Garde.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modulo II -->
-          <div class="syllabus-card" data-module="2">
-            <div class="card-header">
-              <span class="module-icon">👠</span>
-              <h3 class="module-title">Módulo II: Silueta y Estilismo</h3>
-              <span class="expand-icon">+</span>
-            </div>
-            <div class="card-body">
-              <div class="card-content">
-                <ul>
-                  <li>Ingeniería corporal: uso de pads, tucking, corsetería y proporciones.</li>
-                  <li>Caminata y porte escénico.</li>
-                  <li>Estilismo de pelucas y front lace.</li>
-                  <li>Diseño de concepto y coherencia estética.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modulo III -->
-          <div class="syllabus-card" data-module="3">
-            <div class="card-header">
-              <span class="module-icon">🎤</span>
-              <h3 class="module-title">Módulo III: El Escenario es tu Imperio</h3>
-              <span class="expand-icon">+</span>
-            </div>
-            <div class="card-body">
-              <div class="card-content">
-                <ul>
-                  <li>Dominio del lip-sync.</li>
-                  <li>Expresión corporal y coreografía.</li>
-                  <li>Comedia, improvisación y reading.</li>
-                  <li>Presencia escénica y manejo de nervios.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modulo IV -->
-          <div class="syllabus-card" data-module="4">
-            <div class="card-header">
-              <span class="module-icon">💼</span>
-              <h3 class="module-title">Módulo IV: Gestión de Carrera</h3>
-              <span class="expand-icon">+</span>
-            </div>
-            <div class="card-body">
-              <div class="card-content">
-                <ul>
-                  <li>Marketing personal y redes sociales.</li>
-                  <li>Contratación y ética profesional.</li>
-                  <li>Presupuestar shows y manejo de contratos.</li>
-                  <li>Autocuidado y comunidad.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4. Bloque Final Emocional -->
-    <div class="academy-closing">
-      <div class="container text-center fade-in">
-        <h2 class="closing-title">
-          No formamos imitaciones.<br>
-          Formamos presencia.<br>
-          Formamos carácter.<br>
-          Formamos reinas.
-        </h2>
-        <a href="#registro" class="btn btn-primary btn-lg">✨ Inscripciones Abiertas</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Agency Section -->
-  <section id="agency" class="academy-agency-section" style="background: #000;">
-    <div class="container split-container" style="flex-direction: row-reverse;">
-      <div class="split-image fade-in">
-        <img id="agency-img" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000"
-          alt="IMPERIA Agency">
-      </div>
-      <div class="split-content fade-in">
-        <div class="agency-badge">Representación Exclusiva</div>
-        <h2 class="section-title">IMPERIA Agency</h2>
-        <p>Gestionamos el talento más exclusivo de la región. El Team IMPERIA representa la excelencia en cada
-          performance.</p>
-        <p style="margin-top: 1rem; color: #888;">Nuestra agencia selecciona artistas bajo criterios de alto rendimiento
-          para producciones de primer nivel.</p>
-        <a href="#contacto" class="btn btn-outline" style="margin-top: 2rem;">Solicitar Producción</a>
-      </div>
+  <!-- Final CTA -->
+  <section class="academy-closing" style="padding: 10rem 0;">
+    <div class="container text-center fade-in">
+      <h2 class="closing-title" style="font-size: 2.5rem; margin-bottom: 2rem;">¿Lista para reclamar tu trono?</h2>
+      <a href="/contacto.html" class="btn btn-primary btn-lg">✨ Iniciar Postulación</a>
     </div>
   </section>
 

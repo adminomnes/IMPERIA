@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPERIA | Contacto y Postulación</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/sections/nav.css">
+    <link rel="stylesheet" href="./src/styles/sections/forms.css">
+</head>
+
+<body>
+    <div id="cursor-halo"></div>
+
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <div class="mobile-sidebar" id="mobile-sidebar">
+        <div class="sidebar-header">
+            <a href="/" class="nav-logo">IMPERIA</a>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/talentos.html">Talentos</a></li>
+            <li><a href="/academy.html">Academy</a></li>
+            <li><a href="/agency.html">Agency</a></li>
+            <li><a href="/contacto.html">Contacto</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p class="sidebar-claim">Donde comienza tu reinado</p>
+        </div>
+    </div>
+
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">IMPERIA</a>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/talentos.html">Talentos</a></li>
+                <li><a href="/academy.html">Academy</a></li>
+                <li><a href="/agency.html">Agency</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+            </ul>
+            <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="registration-section" style="padding-top: 15rem;">
+        <div class="container">
+            <div class="section-header fade-in text-center">
+                <h1 class="section-title">Únete a IMPERIA</h1>
+                <p class="section-subtitle">Ya sea para postular a la academia o solicitar representación de nuestra
+                    agencia, este es tu primer paso.</p>
+            </div>
+
+            <div class="registration-form fade-in">
+                <form id="talent-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="artistName">Nombre Artístico</label>
+                            <input type="text" id="artistName" name="artistName" required
+                                placeholder="Tu nombre en el escenario">
+                        </div>
+                        <div class="form-group">
+                            <label for="realName">Nombre Real</label>
+                            <input type="text" id="realName" name="realName" required placeholder="Tu nombre legal">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Ciudad</label>
+                            <input type="text" id="city" name="city" required placeholder="Antofagasta, Calama, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Edad</label>
+                            <input type="number" id="age" name="age" required min="18">
+                        </div>
+                        <div class="form-group">
+                            <label for="specialty">Especialidad Principal</label>
+                            <select id="specialty" name="specialty">
+                                <option value="Maquillaje">Maquillaje / Caracterización</option>
+                                <option value="Baile">Baile / Coreografía</option>
+                                <option value="Lip-sync">Lip-sync / Performance</option>
+                                <option value="Comedia">Comedia / Reading</option>
+                                <option value="Costura">Costura / Diseño</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Años de experiencia</label>
+                            <input type="text" id="experience" name="experience" placeholder="Nuevo, 1 año, 5 años...">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="description">Cuéntanos sobre tu arte</label>
+                            <textarea id="description" name="description" rows="4"
+                                placeholder="¿Qué te motiva? ¿Cuál es tu estilo?"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="social">Redes Sociales (IG/TikTok)</label>
+                            <input type="text" id="social" name="social" placeholder="@tuusuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+56 9 XXXX XXXX">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Fotos de referencia (Opcional)</label>
+                            <div class="file-input-container">
+                                <input type="file" id="photos" name="photos" multiple hidden accept="image/*">
+                                <p>Haz clic para subir tus mejores transformaciones</p>
+                                <span class="module-icon" style="font-size: 1.5rem;">📸</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <button type="submit" class="btn btn-primary btn-lg">💖 Enviar Postulación</button>
+                    </div>
+                </form>
+                <div id="form-success" class="success-message">
+                    <h3>¡Postulación Recibida!</h3>
+                    <p>Tu mensaje ha sido enviado al Team IMPERIA. Revisaremos tu perfil y nos pondremos en contacto
+                        contigo pronto. ¡Prepárate para reinar!</p>
+                    <button class="btn btn-outline" style="margin-top: 1rem;" onclick="location.reload()">Enviar
+                        otra</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
