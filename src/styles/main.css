@@ -3,10 +3,12 @@
 :root {
   /* Pop Diva Palette */
   --color-black: #000000;
+  --color-gray-deep: #050505;
+  --color-gray-dark: #0a0a0a;
+  --color-gray-surface: #121212;
   --color-white: #FFFFFF;
   --color-gray-light: #EAEAEA;
   --color-gray-soft: #BFBFBF;
-  --color-gray-dark: #0a0a0a;
   --color-pink-vibrant: #FF2D8D;
   --color-pink-light: #FF4FA3;
   --color-magenta: #D9008D;
@@ -16,6 +18,7 @@
   /* Gradientes */
   --grad-pink: linear-gradient(135deg, var(--color-pink-vibrant) 0%, var(--color-pink-light) 100%);
   --grad-dark-pink: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 45, 141, 0.1) 100%);
+  --grad-radial-pink: radial-gradient(circle at center, rgba(255, 45, 141, 0.12) 0%, transparent 70%);
 
   /* Fonts */
   --font-primary: 'Outfit', sans-serif;
@@ -37,11 +40,17 @@
 }
 
 body {
-  background-color: var(--color-black);
+  background-color: var(--color-gray-deep);
   color: var(--color-white);
   font-family: var(--font-primary);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+section {
+  padding: 12rem 0;
+  /* Increased vertical spacing */
+  position: relative;
 }
 
 /* Global Typography Glows */

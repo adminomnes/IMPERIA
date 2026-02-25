@@ -1,6 +1,6 @@
 .academy-agency-section {
-    padding: 8rem 0;
-    background: linear-gradient(135deg, #000 0%, #0a0a0a 100%);
+    padding: 12rem 0;
+    background: linear-gradient(135deg, var(--color-gray-surface) 0%, var(--color-black) 100%);
     border-top: 1px solid var(--color-pink-glow);
     position: relative;
 }

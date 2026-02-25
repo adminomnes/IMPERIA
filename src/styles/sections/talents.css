@@ -1,7 +1,9 @@
 .talents-section {
-    padding: 8rem 0;
-    background-color: var(--color-black);
+    padding: 12rem 0;
+    background-color: var(--color-gray-dark);
+    background-image: var(--grad-radial-pink);
     position: relative;
+    border-top: 1px solid rgba(255, 45, 141, 0.05);
 }
 
 .talents-grid {

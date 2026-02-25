@@ -1,6 +1,7 @@
 .registration-section {
-    padding: 8rem 0;
-    background-color: var(--color-gray-dark);
+    padding: 12rem 0;
+    background-color: var(--color-gray-deep);
+    background-image: var(--grad-radial-pink);
     position: relative;
     border-top: 1px solid var(--color-pink-glow);
 }
