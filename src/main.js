@@ -2,6 +2,31 @@
 import { db } from './modules/db.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Ash Particles Effect
+  const ashContainer = document.getElementById('ash-container');
+  if (ashContainer) {
+    for (let i = 0; i < 40; i++) {
+      const ash = document.createElement('div');
+      ash.className = 'ash';
+
+      // Random properties
+      const size = Math.random() * 3 + 1;
+      const left = Math.random() * 100;
+      const duration = Math.random() * 15 + 10;
+      const delay = Math.random() * 10;
+
+      ash.style.width = `${size}px`;
+      ash.style.height = `${size}px`;
+      ash.style.left = `${left}%`;
+      ash.style.bottom = `-5%`;
+      ash.style.opacity = Math.random() * 0.3;
+      ash.style.animation = `floatAsh ${duration}s linear infinite`;
+      ash.style.animationDelay = `${delay}s`;
+
+      ashContainer.appendChild(ash);
+    }
+  }
+
   // Navigation Scroll Effect
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
