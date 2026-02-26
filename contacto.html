@@ -33,27 +33,37 @@
 
     <nav class="navbar scrolled">
         <div class="container nav-container">
-            <a href="/" class="nav-logo">IMPERIA</a>
-            <ul class="nav-links">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/talentos.html">Talentos</a></li>
-                <li><a href="/academy.html">Academy</a></li>
-                <li><a href="/agency.html">Agency</a></li>
-                <li><a href="/contacto.html">Contacto</a></li>
-            </ul>
-            <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+            <div class="nav-left">
+                <a href="index.html" class="nav-logo">IMPERIA</a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav-home">Inicio</a></li>
+                    <li><a href="talentos.html" data-i18n="nav-talents">Talentos</a></li>
+                    <li><a href="academy.html" data-i18n="nav-academy">Academy</a></li>
+                    <li><a href="agency.html" data-i18n="nav-agency">Agency</a></li>
+                    <li><a href="contacto.html" data-i18n="nav-contact">Contacto</a></li>
+                </ul>
+                <div class="lang-selector">
+                    <button class="lang-btn" data-lang="es">ES</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <section class="registration-section" style="padding-top: 15rem;">
         <div class="container">
             <div class="section-header fade-in text-center">
-                <h1 class="section-title">Únete a IMPERIA</h1>
-                <p class="section-subtitle">Ya sea para postular a la academia o solicitar representación de nuestra
+                <h1 class="section-title" data-i18n="contact-title">Únete a IMPERIA</h1>
+                <p class="section-subtitle" data-i18n="contact-subtitle">Ya sea para postular a la academia o solicitar
+                    representación de nuestra
                     agencia, este es tu primer paso.</p>
             </div>
 
@@ -61,24 +71,26 @@
                 <form id="talent-form">
                     <div class="form-grid">
                         <div class="form-group">
-                            <label for="artistName">Nombre Artístico</label>
-                            <input type="text" id="artistName" name="artistName" required
+                            <label for="artistName" data-i18n="form-artist-name">Nombre Artístico</label>
+                            <input type="text" id="artistName" name="artistName" required data-i18n="form-artist-name"
                                 placeholder="Tu nombre en el escenario">
                         </div>
                         <div class="form-group">
-                            <label for="realName">Nombre Real</label>
-                            <input type="text" id="realName" name="realName" required placeholder="Tu nombre legal">
+                            <label for="realName" data-i18n="form-real-name">Nombre Real</label>
+                            <input type="text" id="realName" name="realName" required data-i18n="form-real-name"
+                                placeholder="Tu nombre legal">
                         </div>
                         <div class="form-group">
-                            <label for="city">Ciudad</label>
-                            <input type="text" id="city" name="city" required placeholder="Antofagasta, Calama, etc.">
+                            <label for="city" data-i18n="form-city">Ciudad</label>
+                            <input type="text" id="city" name="city" required data-i18n="form-city"
+                                placeholder="Antofagasta, Calama, etc.">
                         </div>
                         <div class="form-group">
-                            <label for="age">Edad</label>
+                            <label for="age" data-i18n="form-age">Edad</label>
                             <input type="number" id="age" name="age" required min="18">
                         </div>
                         <div class="form-group">
-                            <label for="specialty">Especialidad Principal</label>
+                            <label for="specialty" data-i18n="form-specialty">Especialidad Principal</label>
                             <select id="specialty" name="specialty">
                                 <option value="Maquillaje">Maquillaje / Caracterización</option>
                                 <option value="Baile">Baile / Coreografía</option>
@@ -88,25 +100,29 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="experience">Años de experiencia</label>
-                            <input type="text" id="experience" name="experience" placeholder="Nuevo, 1 año, 5 años...">
+                            <label for="experience" data-i18n="form-experience">Años de experiencia</label>
+                            <input type="text" id="experience" name="experience" data-i18n="form-experience"
+                                placeholder="Nuevo, 1 año, 5 años...">
                         </div>
                         <div class="form-group full-width">
-                            <label for="description">Cuéntanos sobre tu arte</label>
-                            <textarea id="description" name="description" rows="4"
+                            <label for="description" data-i18n="form-description-label">Cuéntanos sobre tu arte</label>
+                            <textarea id="description" name="description" rows="4" data-i18n="form-description-label"
                                 placeholder="¿Qué te motiva? ¿Cuál es tu estilo?"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="social">Redes Sociales (IG/TikTok)</label>
-                            <input type="text" id="social" name="social" placeholder="@tuusuario">
+                            <label for="social" data-i18n="form-social">Redes Sociales (IG/TikTok)</label>
+                            <input type="text" id="social" name="social" data-i18n="form-social"
+                                placeholder="@tuusuario">
                         </div>
                         <div class="form-group">
-                            <label for="phone">Teléfono / WhatsApp</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="+56 9 XXXX XXXX">
+                            <label for="phone" data-i18n="form-phone">Teléfono / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" required data-i18n="form-phone"
+                                placeholder="+56 9 XXXX XXXX">
                         </div>
                         <div class="form-group full-width">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            <label for="email" data-i18n="form-email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required data-i18n="form-email"
+                                placeholder="tu@email.com">
                         </div>
                         <div class="form-group full-width">
                             <label>Fotos de referencia (Opcional)</label>
@@ -118,7 +134,8 @@
                         </div>
                     </div>
                     <div class="form-footer">
-                        <button type="submit" class="btn btn-primary btn-lg">💖 Enviar Postulación</button>
+                        <button type="submit" class="btn btn-primary btn-lg" data-i18n="form-submit">💖 Enviar
+                            Postulación</button>
                     </div>
                 </form>
                 <div id="form-success" class="success-message">

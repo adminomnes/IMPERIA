@@ -33,27 +33,37 @@
 
     <nav class="navbar scrolled">
         <div class="container nav-container">
-            <a href="/" class="nav-logo">IMPERIA</a>
-            <ul class="nav-links">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/talentos.html">Talentos</a></li>
-                <li><a href="/academy.html">Academy</a></li>
-                <li><a href="/agency.html">Agency</a></li>
-                <li><a href="/contacto.html">Contacto</a></li>
-            </ul>
-            <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+            <div class="nav-left">
+                <a href="index.html" class="nav-logo">IMPERIA</a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav-home">Inicio</a></li>
+                    <li><a href="talentos.html" data-i18n="nav-talents">Talentos</a></li>
+                    <li><a href="academy.html" data-i18n="nav-academy">Academy</a></li>
+                    <li><a href="agency.html" data-i18n="nav-agency">Agency</a></li>
+                    <li><a href="contacto.html" data-i18n="nav-contact">Contacto</a></li>
+                </ul>
+                <div class="lang-selector">
+                    <button class="lang-btn" data-lang="es">ES</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <section class="talents-section" style="padding-top: 15rem;">
         <div class="container">
             <div class="section-header fade-in text-center">
-                <h1 class="section-title">Nuestros Talentos</h1>
-                <p class="section-subtitle">Explora el catálogo oficial de artistas IMPERIA. Una colección de
+                <h1 class="section-title" data-i18n="nav-talents">Nuestros Talentos</h1>
+                <p class="section-subtitle" data-i18n="vitrina-talents-sub">Explora el catálogo oficial de artistas
+                    IMPERIA. Una colección de
                     identidades que dominan el escenario con maestría.</p>
             </div>
             <div class="talents-grid" id="talents-container">

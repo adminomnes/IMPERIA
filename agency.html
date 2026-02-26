@@ -33,19 +33,28 @@
 
     <nav class="navbar scrolled">
         <div class="container nav-container">
-            <a href="/" class="nav-logo">IMPERIA</a>
-            <ul class="nav-links">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/talentos.html">Talentos</a></li>
-                <li><a href="/academy.html">Academy</a></li>
-                <li><a href="/agency.html">Agency</a></li>
-                <li><a href="/contacto.html">Contacto</a></li>
-            </ul>
-            <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+            <div class="nav-left">
+                <a href="index.html" class="nav-logo">IMPERIA</a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav-home">Inicio</a></li>
+                    <li><a href="talentos.html" data-i18n="nav-talents">Talentos</a></li>
+                    <li><a href="academy.html" data-i18n="nav-academy">Academy</a></li>
+                    <li><a href="agency.html" data-i18n="nav-agency">Agency</a></li>
+                    <li><a href="contacto.html" data-i18n="nav-contact">Contacto</a></li>
+                </ul>
+                <div class="lang-selector">
+                    <button class="lang-btn" data-lang="es">ES</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -53,10 +62,11 @@
         <div class="academy-hero fade-in">
             <div class="container text-center">
                 <h1 class="academy-hero-title">IMPERIA Agency</h1>
-                <h3 class="academy-hero-subtitle">Representación Exclusiva</h3>
-                <p class="academy-hero-text">Gestionamos el talento más exclusivo de la región. El Team IMPERIA
+                <h3 class="academy-hero-subtitle" data-i18n="agency-hero-subtitle">Representación Exclusiva</h3>
+                <p class="academy-hero-text" data-i18n="agency-hero-text">Gestionamos el talento más exclusivo de la
+                    región. El Team IMPERIA
                     representa la excelencia en cada performance.</p>
-                <a href="contacto.html" class="btn btn-primary">Solicitar Producción</a>
+                <a href="contacto.html" class="btn btn-primary" data-i18n="agency-hero-btn">Solicitar Producción</a>
             </div>
         </div>
 

@@ -1,5 +1,6 @@
 // Main JS for IMPERIA
 import { db } from './modules/db.js';
+import { translations, setLanguage, getCurrentLanguage } from './modules/i18n.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Halo Cursor Logic
@@ -181,6 +182,61 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
   }
+
+  // --- Language Switcher Logic ---
+  const currentLang = getCurrentLanguage();
+  setLanguage(currentLang);
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLanguage(btn.dataset.lang);
+    });
+  });
+
+  // --- Sound Experience Logic ---
+  const soundToggle = document.getElementById('sound-toggle');
+  let isSpeaking = false;
+
+  const speakWelcome = () => {
+    const lang = getCurrentLanguage();
+    const message = translations[lang]["welcome-msg"];
+    const utterance = new SpeechSynthesisUtterance(message);
+
+    // Set a more sophisticated voice if available
+    const voices = window.speechSynthesis.getVoices();
+    const femaleVoice = voices.find(v => (v.name.includes('Female') || v.name.includes('Google')) && v.lang.startsWith(lang));
+
+    if (femaleVoice) utterance.voice = femaleVoice;
+    utterance.pitch = 1.1;
+    utterance.rate = 0.9;
+
+    utterance.onstart = () => {
+      isSpeaking = true;
+      soundToggle.classList.add('active');
+    };
+
+    utterance.onend = () => {
+      isSpeaking = false;
+      soundToggle.classList.remove('active');
+    };
+
+    window.speechSynthesis.speak(utterance);
+  };
+
+  if (soundToggle) {
+    soundToggle.addEventListener('click', () => {
+      if (isSpeaking) {
+        window.speechSynthesis.cancel();
+        isSpeaking = false;
+        soundToggle.classList.remove('active');
+      } else {
+        speakWelcome();
+      }
+    });
+  }
+
+  // Reload voices when they change (browser compatibility)
+  window.speechSynthesis.onvoiceschanged = () => { };
 
   renderTalents();
 });

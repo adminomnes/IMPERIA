@@ -33,19 +33,28 @@
 
     <nav class="navbar scrolled">
         <div class="container nav-container">
-            <a href="/" class="nav-logo">IMPERIA</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="talentos.html">Talentos</a></li>
-                <li><a href="academy.html">Academy</a></li>
-                <li><a href="agency.html">Agency</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-            <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+            <div class="nav-left">
+                <a href="index.html" class="nav-logo">IMPERIA</a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav-home">Inicio</a></li>
+                    <li><a href="talentos.html" data-i18n="nav-talents">Talentos</a></li>
+                    <li><a href="academy.html" data-i18n="nav-academy">Academy</a></li>
+                    <li><a href="agency.html" data-i18n="nav-agency">Agency</a></li>
+                    <li><a href="contacto.html" data-i18n="nav-contact">Contacto</a></li>
+                </ul>
+                <div class="lang-selector">
+                    <button class="lang-btn" data-lang="es">ES</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -53,30 +62,36 @@
         <div class="academy-hero fade-in">
             <div class="container text-center">
                 <h1 class="academy-hero-title">IMPERIA Academy</h1>
-                <h3 class="academy-hero-subtitle">Donde comienza tu reinado</h3>
-                <p class="academy-hero-text">Formación profesional en transformismo escénico para quienes desean pasar
+                <h3 class="academy-hero-subtitle" data-i18n="academy-hero-subtitle">Donde comienza tu reinado</h3>
+                <p class="academy-hero-text" data-i18n="academy-hero-text">Formación profesional en transformismo
+                    escénico para quienes desean pasar
                     del hobby a la maestría.</p>
-                <a href="contacto.html" class="btn btn-primary">💖 Postular a la Academia</a>
+                <a href="contacto.html" class="btn btn-primary" data-i18n="academy-hero-btn">💖 Postular a la
+                    Academia</a>
             </div>
         </div>
 
         <div class="academy-manifesto">
             <div class="container">
                 <div class="manifesto-content fade-in">
-                    <h2 class="manifesto-title">Una institución, no solo una escuela</h2>
+                    <h2 class="manifesto-title" data-i18n="manifesto-title">Una institución, no solo una escuela</h2>
                     <div class="manifesto-text">
-                        <p>Imperia no es solo una escuela de arte; es una institución dedicada a la formación de figuras
+                        <p data-i18n="manifesto-item-1">Imperia no es solo una escuela de arte; es una institución
+                            dedicada a la formación de figuras
                             icónicas en el mundo del transformismo contemporáneo.</p>
-                        <p>Fundada bajo la premisa de que el género es un lienzo y la identidad una obra maestra,
+                        <p data-i18n="manifesto-item-2">Fundada bajo la premisa de que el género es un lienzo y la
+                            identidad una obra maestra,
                             Imperia nace para llenar el vacío entre el hobby y la maestría escénica.</p>
-                        <p>En nuestra academia entendemos que ser una estrella del transformismo exige una amalgama de
+                        <p data-i18n="manifesto-item-3">En nuestra academia entendemos que ser una estrella del
+                            transformismo exige una amalgama de
                             habilidades que trascienden el maquillaje. Requiere la precisión de un pintor, la gracia de
                             un bailarín, la presencia de un actor y la visión de un diseñador.</p>
                         <p>Nuestra misión es empoderar a cada estudiante, entregándole herramientas técnicas y
                             psicológicas para habitar su personaje con confianza inquebrantable.</p>
                         <p>En Imperia respetamos la herstory de quienes pavimentaron el camino, mientras impulsamos la
                             innovación y la ruptura de moldes.</p>
-                        <p class="manifesto-highlight">Aquí no solo aprendes a transformarte. <br>Aquí aprendes a
+                        <p class="manifesto-highlight" data-i18n="manifesto-highlight">Aquí no solo aprendes a
+                            transformarte. <br>Aquí aprendes a
                             reinar.</p>
                     </div>
                 </div>
@@ -85,12 +100,13 @@
 
         <div class="academy-syllabus">
             <div class="container">
-                <h2 class="section-title text-center">El camino hacia el trono</h2>
+                <h2 class="section-title text-center" data-i18n="syllabus-title">El camino hacia el trono</h2>
                 <div class="syllabus-grid">
                     <div class="syllabus-card" data-module="1">
                         <div class="card-header">
                             <span class="module-icon">💄</span>
-                            <h3 class="module-title">Módulo I: La Arquitectura del Rostro</h3>
+                            <h3 class="module-title" data-i18n="module-1-title">Módulo I: La Arquitectura del Rostro
+                            </h3>
                             <span class="expand-icon">+</span>
                         </div>
                         <div class="card-body">

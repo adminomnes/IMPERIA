@@ -41,19 +41,28 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container nav-container">
-      <a href="/" class="nav-logo">IMPERIA</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="talentos.html">Talentos</a></li>
-        <li><a href="academy.html">Academy</a></li>
-        <li><a href="agency.html">Agency</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-      <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
+      <div class="nav-left">
+        <a href="index.html" class="nav-logo">IMPERIA</a>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="nav-home">Inicio</a></li>
+          <li><a href="talentos.html" data-i18n="nav-talents">Talentos</a></li>
+          <li><a href="academy.html" data-i18n="nav-academy">Academy</a></li>
+          <li><a href="agency.html" data-i18n="nav-agency">Agency</a></li>
+          <li><a href="contacto.html" data-i18n="nav-contact">Contacto</a></li>
+        </ul>
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="nav-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -66,10 +75,19 @@
           class="hero-video-piece">
         </video>
       </div>
-      <h1 class="hero-title-cinematic">Donde el talento domina el escenario</h1>
+      <h1 class="hero-title-cinematic" data-i18n="hero-title">Donde el talento domina el escenario</h1>
+
+      <!-- Experience Buttons -->
+      <div class="hero-experience">
+        <button id="sound-toggle" class="btn-sound">
+          <span class="sound-icon">🔊</span>
+          <span class="sound-text" data-i18n="hero-audio-btn">Activar experiencia sonora</span>
+        </button>
+      </div>
+
       <div class="hero-cta" style="margin-top: 2rem;">
-        <a href="talentos.html" class="btn btn-primary">Explorar Talentos</a>
-        <a href="contacto.html" class="btn btn-outline">Postula a IMPERIA</a>
+        <a href="talentos.html" class="btn btn-primary" data-i18n="hero-cta-talents">Explorar Talentos</a>
+        <a href="contacto.html" class="btn btn-outline" data-i18n="hero-cta-postulate">Postula a IMPERIA</a>
       </div>
     </div>
   </section>
@@ -85,10 +103,10 @@
           <div class="card-glow-overlay"></div>
         </div>
         <div class="vitrina-content">
-          <h2 class="section-title">El Elenco</h2>
-          <p class="section-subtitle" style="margin-left: 0;">Descubre a los artistas que están redefiniendo el
-            transformismo escénico en la región.</p>
-          <a href="talentos.html" class="btn btn-outline">Ver Catálogo Completo</a>
+          <h2 class="section-title" data-i18n="vitrina-talents-title">El Elenco</h2>
+          <p class="section-subtitle" style="margin-left: 0;" data-i18n="vitrina-talents-sub">Descubre a los artistas
+            que están redefiniendo el transformismo escénico en la región.</p>
+          <a href="talentos.html" class="btn btn-outline" data-i18n="vitrina-talents-btn">Ver Catálogo Completo</a>
         </div>
       </div>
 
@@ -101,10 +119,10 @@
           <div class="card-glow-overlay"></div>
         </div>
         <div class="vitrina-content">
-          <h2 class="section-title">IMPERIA Academy</h2>
-          <p class="section-subtitle" style="margin-left: 0;">Formación profesional para quienes desean pasar del hobby
-            a la maestría escénica.</p>
-          <a href="academy.html" class="btn btn-primary">Descubrir la Academia</a>
+          <h2 class="section-title" data-i18n="vitrina-academy-title">IMPERIA Academy</h2>
+          <p class="section-subtitle" style="margin-left: 0;" data-i18n="vitrina-academy-sub">Formación profesional para
+            quienes desean pasar del hobby a la maestría escénica.</p>
+          <a href="academy.html" class="btn btn-primary" data-i18n="vitrina-academy-btn">Descubrir la Academia</a>
         </div>
       </div>
 
@@ -117,10 +135,10 @@
           <div class="card-glow-overlay"></div>
         </div>
         <div class="vitrina-content">
-          <h2 class="section-title">IMPERIA Agency</h2>
-          <p class="section-subtitle" style="margin-left: 0;">Representación exclusiva y gestión de talento para
-            producciones de alto impacto.</p>
-          <a href="agency.html" class="btn btn-outline">Servicios de Agencia</a>
+          <h2 class="section-title" data-i18n="vitrina-agency-title">IMPERIA Agency</h2>
+          <p class="section-subtitle" style="margin-left: 0;" data-i18n="vitrina-agency-sub">Representación exclusiva y
+            gestión de talento para producciones de alto impacto.</p>
+          <a href="agency.html" class="btn btn-outline" data-i18n="vitrina-agency-btn">Servicios de Agencia</a>
         </div>
       </div>
 
@@ -130,8 +148,9 @@
   <!-- Final CTA -->
   <section class="academy-closing" style="padding: 10rem 0;">
     <div class="container text-center fade-in">
-      <h2 class="closing-title" style="font-size: 2.5rem; margin-bottom: 2rem;">¿Lista para reclamar tu trono?</h2>
-      <a href="contacto.html" class="btn btn-primary btn-lg">✨ Iniciar Postulación</a>
+      <h2 class="closing-title" style="font-size: 2.5rem; margin-bottom: 2rem;" data-i18n="vitrina-closing-title">¿Lista
+        para reclamar tu trono?</h2>
+      <a href="contacto.html" class="btn btn-primary btn-lg" data-i18n="vitrina-closing-btn">✨ Iniciar Postulación</a>
     </div>
   </section>
 
